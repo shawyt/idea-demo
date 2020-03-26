@@ -25,7 +25,7 @@ public class UserService {
      * @param dto
      * @return
      */
-        public UserDto doLogin(UserDto dto) {
+    public UserDto doLogin(UserDto dto) {
         List<User> userList = userMapper.findByLoginName(dto.getLoginName());
         if (CollectionUtils.isEmpty(userList)) {
             LOG.info("根据用户名查找不到记录");
